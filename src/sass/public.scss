@@ -17,17 +17,25 @@
             li{
                     list-style: none;
             }
+            .clearfloat:after{
+                    content:".";
+                    clear:both;
+                    display:block;
+                    height:0;
+                    overflow:hidden;
+                    visibility:hidden;
+            }
+
+            
             .header{
                         width: 100%;
-                        overflow: hidden;
-                       
+                        height: 183px;
+                        
             }
             .wrap{
                         width: 1200px;
                         margin: 0 auto;
-                        overflow: hidden;
-                        
-                        
+                        height: 133px;            
             }
             
             .lang{
@@ -39,7 +47,27 @@
                         margin-left: 35px;
                         font-size: 12px;
                         border-right: 1px solid #cacaca;
-                        
+                        position: relative;
+                        cursor: pointer;
+                       .language{
+                           display: block;
+                           position: absolute;
+                           left:-30px ;
+                           
+                           width: 84px;
+                           border: 1px solid #000;
+                           overflow: hidden;
+                           color: #000;
+                           background: #fff;
+                           z-index:2;
+                           display: none;
+                           span{
+                               display: block;
+                               line-height: 28px;
+                               
+                           }
+                           
+                       }        
                     
             }
             
@@ -103,20 +131,38 @@
 
 .list{
             width: 100%;
-            overflow: hidden;
+           height: 50px;
             background: #000;
+            .wrap{
+                width: 1200px;
+                margin: 0 auto;
+                height: 50px;
+            }
             ul{
                     float: left;
-                    overflow: hidden;
+                    height: 50px;
                     li{
                         float: left;
                         width: 78px;
                         height: 50px;
                         line-height: 50px;
                         text-align: center;
+                        position: relative;
                         a{
                             font-size: 14px;
                             color: #ffb81c;
+                            display: block;
+                        }
+                        i{
+                           position: absolute;
+                            top: 39px;
+                            left: 30px;
+                            font-size: 16px;
+                            color: #fff;
+                            height: 16px;
+                             line-height: 1;
+                             width: 16px;
+                             display: none;
                         }    
                     }
                     li:first-of-type{
@@ -124,6 +170,18 @@
                     }
                     
             }
+//二级导航栏
+.list2{
+            width: 1200px;
+            position: absolute;
+            margin: 0 auto;
+            //overflow: hidden;
+            height: 100px;
+            top: 50px;
+            left: 0;
+            background: red;
+            display: none;
+}
             
             .search{
                    float: right;
@@ -134,6 +192,7 @@
                    font-size: 14px;
                    text-align: right;
                    overflow: hidden;
+                   
                   .s1{
                        margin-right: 10px;
                   }
